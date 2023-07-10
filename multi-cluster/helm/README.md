@@ -17,7 +17,7 @@ metadata:
   name: helm
   namespace: fleet-default
 spec:
-  repo: https://github.com/rancher/fleet-examples
+  repo: https://github.com/eokpere/fleet-examples.git
   paths:
   - multi-cluster/helm
   targets:
