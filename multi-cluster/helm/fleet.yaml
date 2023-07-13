@@ -1,28 +1,26 @@
 namespace: fleet-test
 targetCustomizations:
-- name: k3s
+- name: dev
   helm:
     values:
-      replicas: 1
-      serviceType: NodePort
+      replication: false
   clusterSelector:
     matchLabels:
       env: k3s
 
-- name: k3s-2
+- name: test
   helm:
     values:
-      replicas: 1
-      serviceType: NodePort
+      replicas: 3
   clusterSelector:
     matchLabels:
       env: k3s-2
 
-- name: kubeadm
+- name: prod
   helm:
     values:
       serviceType: NodePort
-      replicas: 1
+      replicas: 3
   clusterSelector:
     matchLabels:
       env: kubeadm
