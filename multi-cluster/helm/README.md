@@ -26,10 +26,10 @@ spec:
       matchLabels:
         env: dev
 
-  - name: test
+  - name: uat
     clusterSelector:
       matchLabels:
-        env: test
+        env: uat
 
   - name: prod
     clusterSelector:
